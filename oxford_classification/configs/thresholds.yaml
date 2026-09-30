@@ -1,0 +1,32 @@
+# Oxford MEST-C scoring thresholds
+# Used by oxford_grader.grader.grade_one() and grade_case()
+
+oxford:
+  instance:
+    min_glomerulus_pixels: 2000  # Connected components smaller than this are noise
+
+  mesangial:
+    lesion_ratio_threshold: 0.25        # M1 if any non-global-sclerosed glom >= 25% lesion
+    cell_density_threshold: 0.08        # M1 if any non-global-sclerosed glom >= 8% cells
+
+  endocapillary:
+    require_copresent_lesion: false    # E1 不强制要求共存系膜病变（提高敏感度）
+    min_endothelial_ratio: 0.015       # 内皮细胞比例阈值 1.5%
+
+  sclerosis:
+    segmental_min_ratio: 0.10          # lower bound of segmental sclerosis
+    global_sclerosis_ratio: 0.80       # glom >=80% sclerosis => global sclerosis
+
+  tubular_atrophy:
+    t0_max: 0.15                       # <15% => T0 (优化：降低阈值提高敏感度)
+    t1_max: 0.40                       # <=40% => T1; else T2 (优化：降低阈值)
+    cortex_dilation_px: 200            # estimate_cortex_area dilation
+    use_indirect_estimation: true      # 启用间接估算（当无label=4时）
+
+  crescent:
+    c1_min_glomeruli: 1                # need at least 1 glom with crescent
+    c2_min_ratio: 0.25                 # >=25% of glomeruli => C2
+
+  confidence:
+    min_total_glomeruli: 8             # <8 glomeruli => low confidence
+    min_cortex_area_px: 50000          # tiny cortex => low confidence

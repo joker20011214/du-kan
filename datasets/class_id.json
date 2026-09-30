@@ -1,0 +1,74 @@
+{
+  "0": {
+    "name": "background",
+    "color_rgb": [
+      0,
+      0,
+      0
+    ],
+    "color_hex": "#000000"
+  },
+  "1": {
+    "name": "crescent",
+    "color_rgb": [
+      255,
+      0,
+      0
+    ],
+    "color_hex": "#ff0000"
+  },
+  "2": {
+    "name": "sclerosis",
+    "color_rgb": [
+      255,
+      165,
+      0
+    ],
+    "color_hex": "#ffa500"
+  },
+  "3": {
+    "name": "mesangial_lesion",
+    "color_rgb": [
+      255,
+      255,
+      0
+    ],
+    "color_hex": "#ffff00"
+  },
+  "4": {
+    "name": "tubular_atrophy",
+    "color_rgb": [
+      0,
+      255,
+      0
+    ],
+    "color_hex": "#00ff00"
+  },
+  "5": {
+    "name": "mesangial_cell",
+    "color_rgb": [
+      0,
+      255,
+      255
+    ],
+    "color_hex": "#00ffff"
+  },
+  "6": {
+    "name": "glomerulus",
+    "color_rgb": [
+      0,
+      128,
+      255
+    ],
+    "color_hex": "#0080ff"
+  },
+  "7": {
+    "name": "endothelial_cell",
+    "color_rgb": [
+      200,
+      0,
+      255
+    ],
+    "color_hex": "#c800ff"
+  }
+}
